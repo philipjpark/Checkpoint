@@ -16,8 +16,9 @@ CREATE A FUNCTION THAT TAKES A CALLBACK AND INVOKES THAT CALLBACK FUNCTION
 */
 
 function higherOrder(callback) {
-  // CODE HERE
+  callback();
 }
+// function 
 
 /*
 QUESTION 2
@@ -27,7 +28,9 @@ CREATE A FUNCTION ACCEPTS ONE ARGUMENT, A CALLBACK THAT RETURNS THE RETURN VALUE
 */
 
 function q2(callback) {
-  // CODE HERE
+  callback() {
+    return "hello";
+  }
 }
 
 /*
@@ -40,7 +43,11 @@ USE A FOR-LOOP
 */
 
 function forEach(array, callback) {
-  // CODE HERE
+  for (var i = 0; i < array.length; i++) {
+
+    var elem = array[i];
+    callback(elem, i)
+  }
 }
 
 /*
@@ -56,8 +63,9 @@ USE A FOR-LOOP
 */
 
 function map(array, callback) {
-  // CODE HERE
-}
+  
+  let array = array.map(callback());
+};
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH

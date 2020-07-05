@@ -38,10 +38,14 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 
 */
 function pushString(arr) {
-  arr = [];
   
-  if (arr == []);
-  {return 'last element'}
+arr = [];
+
+if (arr === [])
+  {console.log ("last element")}
+  else 
+  {return (arr + "last element")}
+}
     
 
 /*
@@ -59,11 +63,16 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 */
 
 function mutataZeroElem(array) {
-   
-    if (arr == []);
-    {return true}
-      
-}
+   array = [];
+  if (array === []);
+  {console.log()}
+
+  return array
+    
+};
+
+// mutataZeroElem([1,2,3])
+  
 
 /*
 QUESTION 3
@@ -85,11 +94,12 @@ true
 
 function printElements(array) {
   
-  {
-  array.forEach(x)
-  {console.log(x)};
-  }
-}
+  
+  array.forEach(x => (console.log(x)))
+  };
+  printElements([1, true, 'I am the third element', 'my index is 3 confusing right'])
+
+
 
 /*
 QUESTION 4
@@ -117,8 +127,10 @@ unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 */
 
 function unique(array) {
-  // CODE HERE
-}
+    return [...new Set(array)];
+  }
+  
+
 
 /*
 QUESTION 5
@@ -133,10 +145,14 @@ HINT USE AN INNER FOR-LOOP
 */
 
 function compare(array1, array2) {
-  array1 = [];
-  array2 =[];
-
   
+
+  var i = array1.length;
+  while (i--) {
+      if (array1[i] === array2[i]) return true;
+  } return false;
+}
+
 
 /*
 QUESTION 6
@@ -162,7 +178,7 @@ function compareArrays(array1, array2) {
     return newArray;
     }
     
-}
+
 
 /*
 QUESTION 7
@@ -176,16 +192,14 @@ compareArraysOpposite([1,2,3,4], [1,3]) ===> [2, 4]
 */
 
 function compareArraysOpposite(array1, array2) {
-    var newArray = [];
+    array1 = array1.filter(uniqueNum => !array2.includes(uniqueNum)
+    );
     
-    for ( var i = 0; i < array1.length; i++ ) {
-        for ( var j = 0; j < array2.length; j++ ) {
-            if ( array1[i] === array2[j] ) 
-            newArray.push( array1[i] );
-        }
+    return array1;
     }
-    return newArray;
-}
+    compareArraysOpposite([1,2,3,4], [1,3]) 
+    
+    
 
 /*
 QUESTION 8
@@ -209,7 +223,7 @@ retrieveValue(twoDimentionArray, 3, 1) ===> 1
 */
 
 function retrieveValue(arr, row, col) {
-  // CODE HERE
+  
 }
 
 /*
@@ -239,8 +253,13 @@ createTwoDArray(3, 5) ===> [
 */
 
 function createTwoDArray(row, col) {
-  // CODE HERE
-}
+    var arr = new Array(row);
+    for (var i = 0; i < row; i++) {
+        arr[i] = new Array(col);
+    }
+    return arr;
+ };
+
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
@@ -261,7 +280,6 @@ runner.run();
 module.exports = {
   mutateZeroElem,
   pushString,
-  push,
   printElements,
   unique,
   compare,

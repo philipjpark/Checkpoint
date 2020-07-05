@@ -37,14 +37,12 @@ pushTrue([1]) ===> [1, 'last element']
 pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 
 */
-
 function pushString(arr) {
   arr = [];
-
-  if (arr === []);
-  {return true}
-  console.log(arr);
-}
+  
+  if (arr == []);
+  {return 'last element'}
+    
 
 /*
 QUESTION 2
@@ -60,8 +58,11 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 
 */
 
-function push(array, value) {
-  // CODE HERE
+function mutataZeroElem(array) {
+   
+    if (arr == []);
+    {return true}
+      
 }
 
 /*
@@ -83,7 +84,11 @@ true
 */
 
 function printElements(array) {
-  // CODE HERE
+  
+  {
+  array.forEach(x)
+  {console.log(x)};
+  }
 }
 
 /*
@@ -131,8 +136,7 @@ function compare(array1, array2) {
   array1 = [];
   array2 =[];
 
-  for (var )
-}
+  
 
 /*
 QUESTION 6

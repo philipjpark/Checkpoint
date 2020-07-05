@@ -41,15 +41,17 @@ CREATE A FUNCTION THAT ACCEPTS A STRING AND WILL LOG TO THE CONSOLE EACH CHARACT
 */
 
 function logEachChar(str) {
-
-  var eachChar = "";
-
-  for (var i =0; i < str.length, i++;) {
+    var eachChar = "";
+    
+    for (var i = 0; i < str.length; i++) {
+    
     eachChar = eachChar + str;
-    console.log(eachChar.charAt());
-  }
-  return eachChar;
-}
+    console.log(str[i])
+    }
+    return eachChar;
+
+  
+};
 
 /*
 QUESTION 3
@@ -63,10 +65,16 @@ e.g. checkIfCharExists('hello', 'l') ===> true
 */
 
 function checkIfCharExists(str, char) {
-  var term = '';
-  for (var i =0; i < str.length; i++)
-  {return str[i] === true;}
+  for (var i =0; i != str.length; i++){
+    var charInc = char[i];
+    if(str.includes(charInc)) {
+      return true
+    }
+  }
+  return false;
 };
+
+checkIfCharExists("hello", "l")
 
 /*
 QUESTION 4
@@ -80,12 +88,14 @@ e.g. indexOf('hello', 'l') ===> 2
 
 function indexOf(str, char) {
   for (var i = 0; i < str.length; i++)
-  {console.log(str[i])}
+  {var charInc = char[i];
 
-  if (str[i] === true)
-  {return str[i].charAt()}
+  if (str.includes(charInc))
+  {return str.indexOf(charInc);
+  }
 }
-
+return -1;
+};
 /*
 QUESTION 5
 
@@ -115,8 +125,20 @@ FizzBuzz
 */
 
 function fizzBuzz(num) {
-  // CODE HERE
-}
+    for(var i=1;i<=num;i++)
+    {
+      if (i % 5 === 0 && i % 3 === 0){
+        console.log('FizzBuzz');} 
+        else if(i % 3 === 0){console.log('Fizz');} 
+      else if(i % 5 === 0)
+      {console.log('Buzz');} 
+      else 
+      {console.log(i);}
+    };
+  };
+  
+  fizzBuzz(14)
+  
 
 /*
 QUESTION 6
@@ -129,8 +151,12 @@ THE FIBONACCI SEQUENCE STARTS WITH 1 AND 1 AND THEN THE NEXT NUMBER IS THE ADDIT
 */
 
 function fibonacci(n) {
-  // CODE HERE
-}
+
+    if (n <= 2) 
+    {return 1;}
+    else
+    {return fibonacci(n - 1) + fibonacci(n - 2);}
+  }
 
 console.log(fibonacci(5));
 

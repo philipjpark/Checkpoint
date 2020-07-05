@@ -30,7 +30,7 @@ CREATE A FUNCTION ACCEPTS ONE ARGUMENT, A CALLBACK THAT RETURNS THE RETURN VALUE
 
 function q2(callback) {
    return callback()  
-  console.log("something")}; 
+  console.log("Howdy")}; 
 
 
 

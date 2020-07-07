@@ -38,14 +38,11 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 
 */
 function pushString(arr) {
-  
-arr = [];
+  arr[arr.length] = 'last element'
 
-if (arr === [])
-  {console.log ("last element")}
-  else 
-  {return (arr + "last element")}
-}
+  
+  return arr;
+};
     
 
 /*
@@ -62,14 +59,13 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 
 */
 
-function mutataZeroElem(array) {
-   array = [];
-  if (array === []);
-  {console.log()}
+function push(array,value) {
 
-  return array
-    
-};
+  array[array.length] = value;
+value = true
+  return array;
+  
+}
 
 // mutataZeroElem([1,2,3])
   
@@ -94,8 +90,8 @@ true
 
 function printElements(array) {
   
-  
-  array.forEach(x => (console.log(x)))
+  for (i = 0; i < array.length; i++)
+  console.log(array[i])
   };
   printElements([1, true, 'I am the third element', 'my index is 3 confusing right'])
 
@@ -146,12 +142,18 @@ HINT USE AN INNER FOR-LOOP
 
 function compare(array1, array2) {
   
-
-  var i = array1.length;
-  while (i--) {
-      if (array1[i] === array2[i]) return true;
-  } return false;
-}
+  for (var i = 0; i < array1.length; i++){
+    for (var j = 0; j < array2.length; j++)
+        if (array1[i] == array2[j]) 
+        return true;
+    } 
+    return false;
+  }
+  
+  
+  
+  
+  
 
 
 /*
@@ -280,6 +282,7 @@ runner.run();
 module.exports = {
   mutateZeroElem,
   pushString,
+  push,
   printElements,
   unique,
   compare,

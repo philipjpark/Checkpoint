@@ -145,7 +145,7 @@ function question8() {
   return answerToQuestion8;
 }
 
-answerToQuestion8 = question8();
+answerToQuestion8 = question8()
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH

@@ -38,12 +38,10 @@ pushTrue([1,2,3]) ===> [1, 2, 3, 'last element']
 
 */
 function pushString(arr) {
-  arr[arr.length] = 'last element'
+  arr[arr.length] = "last element";
 
-  
   return arr;
-};
-    
+}
 
 /*
 QUESTION 2
@@ -59,16 +57,13 @@ mutateZeroElem([1,2,3]) ===> [1, 2, 3, true]
 
 */
 
-function push(array,value) {
-
+function push(array, value) {
   array[array.length] = value;
-value = true
+  value = true;
   return array;
-  
 }
 
 // mutataZeroElem([1,2,3])
-  
 
 /*
 QUESTION 3
@@ -89,13 +84,14 @@ true
 */
 
 function printElements(array) {
-  
-  for (i = 0; i < array.length; i++)
-  console.log(array[i])
-  };
-  printElements([1, true, 'I am the third element', 'my index is 3 confusing right'])
-
-
+  for (i = 0; i < array.length; i++) console.log(array[i]);
+}
+printElements([
+  1,
+  true,
+  "I am the third element",
+  "my index is 3 confusing right",
+]);
 
 /*
 QUESTION 4
@@ -123,10 +119,8 @@ unique([1,2,3,2,3,2]) ===> [1, 2, 3];
 */
 
 function unique(array) {
-    return [...new Set(array)];
-  }
-  
-
+  return [...new Set(array)];
+}
 
 /*
 QUESTION 5
@@ -141,20 +135,12 @@ HINT USE AN INNER FOR-LOOP
 */
 
 function compare(array1, array2) {
-  
-  for (var i = 0; i < array1.length; i++){
+  for (var i = 0; i < array1.length; i++) {
     for (var j = 0; j < array2.length; j++)
-        if (array1[i] == array2[j]) 
-        return true;
-    } 
-    return false;
+      if (array1[i] == array2[j]) return true;
   }
-  
-  
-  
-  
-  
-
+  return false;
+}
 
 /*
 QUESTION 6
@@ -169,18 +155,15 @@ compareArrays([1, 2, 3, 4], [1, 2]) ====> [1, 2]
 */
 
 function compareArrays(array1, array2) {
-    var newArray = [];
-    
-    for ( var i = 0; i < array1.length; i++ ) {
-        for ( var j = 0; j < array2.length; j++ ) {
-            if ( array1[i] === array2[j] ) 
-            newArray.push( array1[i] );
-        }
-    }
-    return newArray;
-    }
-    
+  var newArray = [];
 
+  for (var i = 0; i < array1.length; i++) {
+    for (var j = 0; j < array2.length; j++) {
+      if (array1[i] === array2[j]) newArray.push(array1[i]);
+    }
+  }
+  return newArray;
+}
 
 /*
 QUESTION 7
@@ -194,14 +177,11 @@ compareArraysOpposite([1,2,3,4], [1,3]) ===> [2, 4]
 */
 
 function compareArraysOpposite(array1, array2) {
-    array1 = array1.filter(uniqueNum => !array2.includes(uniqueNum)
-    );
-    
-    return array1;
-    }
-    compareArraysOpposite([1,2,3,4], [1,3]) 
-    
-    
+  array1 = array1.filter((uniqueNum) => !array2.includes(uniqueNum));
+
+  return array1;
+}
+compareArraysOpposite([1, 2, 3, 4], [1, 3]);
 
 /*
 QUESTION 8
@@ -223,10 +203,22 @@ var twoDimentionArray = [
 retrieveValue(twoDimentionArray, 3, 1) ===> 1
 
 */
+var twoDimentionArray = [
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 0, 0, 0],
+  [0, 1, 0, 0],
+]
 
-function retrieveValue(arr, row, col) {
-  
-}
+function retrieveValue(arr, row, col)  { 
+
+    console.log(arr[row]);
+    
+    return arr[row][col];
+    
+     
+    }
+    retrieveValue(twoDimentionArray, 3, 1)
 
 /*
 QUESTION 9
@@ -255,13 +247,16 @@ createTwoDArray(3, 5) ===> [
 */
 
 function createTwoDArray(row, col) {
-    var arr = new Array(row);
-    for (var i = 0; i < row; i++) {
-        arr[i] = new Array(col);
-    }
-    return arr;
- };
+  var arr = new Array(row);
+  for (var i = 0; i < row; i++) {
+    arr[i] === 0;
+    arr[i] = new Array(col);
+    arr[i].fill(0);
+  }
+  return arr;
+}
 
+createTwoDArray(3, 5);
 
 /*
 TEST SECTION, PLEASE DO NOT TOUCH
@@ -271,11 +266,11 @@ TEST SECTION, PLEASE DO NOT TOUCH
 
 */
 
-const Mocha = require('mocha');
+const Mocha = require("mocha");
 
 const runner = new Mocha({});
 
-runner.addFile('./test.js');
+runner.addFile("./test.js");
 
 runner.run();
 
@@ -292,4 +287,4 @@ module.exports = {
   createTwoDArray,
 };
 
-console.log('');
+console.log("");

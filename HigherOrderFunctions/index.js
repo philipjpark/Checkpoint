@@ -69,7 +69,7 @@ USE A FOR-LOOP
 
 function map(array, callback) {
   let lastArray = array.map(callback => {return callback *2})
-  return lastArray; 
+  return lastArray
 };
 
 

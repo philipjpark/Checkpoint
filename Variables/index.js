@@ -102,7 +102,7 @@ refer to lecutre about expressions
 
 (1 + 5) * 4;
 
-var numExpression;
+var numExpression
 numExpression = 5;
 
 /*

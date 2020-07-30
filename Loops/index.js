@@ -15,7 +15,7 @@ CREATE A FUNCTION THAT CONSOLE.LOGS hello world 3 times
 
 function helloWorld3Times() {
   for (var i = 0; i < 3; i++) {
-    console.log('hello world');
+    console.log('hello world')
   }
 }
 
